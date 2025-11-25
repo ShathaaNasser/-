@@ -28,9 +28,7 @@ html, body{
   box-sizing: border-box;
 }
 
-*, *::before, *::after {
-  box-sizing: inherit;
-}
+*, *::before, *::after { box-sizing: inherit; }
 
 .container{
   width: 95%;
@@ -77,9 +75,7 @@ h1,h2{
   font-weight:700;
 }
 
-.table-wrapper{
-  overflow-x:auto;
-}
+.table-wrapper{ overflow-x:auto; }
 
 table{
   width:100%;
@@ -132,7 +128,7 @@ table th:first-child, table td:first-child{ width:150px; }
   padding: 0.5rem 1rem;
 }
 
-#saveBtn, #printBtn {
+#saveBtn {
   padding:0.5rem 1rem;
   border-radius: 12px;
   cursor:pointer;
@@ -142,13 +138,9 @@ table th:first-child, table td:first-child{ width:150px; }
   border:none;
   transition:0.2s;
   margin:0.2rem;
+  background: var(--gold);
 }
-
-#saveBtn { background: var(--gold); }
 #saveBtn:hover { background: #c49b2c; }
-
-#printBtn { background: var(--accent); }
-#printBtn:hover { background: #397155; }
 
 #saveMessage {
   color: green;
@@ -182,7 +174,7 @@ table th:first-child, table td:first-child{ width:150px; }
     flex-direction: column;
     align-items: flex-start;
   }
-  #saveBtn, #printBtn{ width: 100%; margin-bottom:0.5rem; }
+  #saveBtn{ width: 100%; margin-bottom:0.5rem; }
   .contact-box{ width: 100%; margin-top:0.5rem; }
 }
 
@@ -201,7 +193,6 @@ table th:first-child, table td:first-child{ width:150px; }
       <div>
         <button id="saveBtn">💾 حفظ</button>
         <span id="saveMessage">تم الحفظ بنجاح ✅</span>
-        <button id="printBtn">🖨️ طباعة</button>
       </div>
       <div class="contact-box">
         <strong> إدارة الجامع:</strong><br/>
@@ -315,8 +306,6 @@ document.getElementById("saveBtn").addEventListener("click",()=>{
   msg.style.display="inline";
   setTimeout(()=>{ msg.style.display="none";},2000);
 });
-
-document.getElementById("printBtn").addEventListener("click",()=>window.print());
 </script>
 </body>
 </html>
